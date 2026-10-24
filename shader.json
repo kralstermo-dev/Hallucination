@@ -2,8 +2,8 @@
   "ver": "0.1",
   "info": {
     "id": "",
-    "name": "Dizzy",
-    "description": "",
+    "name": "Hallucination",
+    "description": "I was kinda inspired by those hallucination images and Acid shaders from minecraft",
     "tags": []
   },
   "renderpass": [
