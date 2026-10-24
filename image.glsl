@@ -22,7 +22,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
     color *= vignette;
 
     color += vec3(0.15, 0.8, 0.25)
-        * pow(max(pattern, 0.0), 4.0);
+       * pow(max(pattern, 0.0), 4.0);
 
-    flagColor = vec4(color, 1.0);
+    fragColor = vec4(color, 1.0);
 }

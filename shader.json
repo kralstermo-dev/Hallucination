@@ -15,7 +15,7 @@
           "channel": 0
         }
       ],
-      "code": "void mainImage(out vec4 fragColor, in vec2 fragCoord)\n{\n    vec2 p = (fragCoord * 2.0 - iResolution.xy) / iResolution.y;\n    float t = iTime;\n    float d = length(p);\n\n    vec2 q = p;\n    q.x += sin(p.y * 4.0 + t) * 0.18;\n    q.y += cos(p.x * 3.0 - t * 0.8) * 0.18;\n\n    float wave1 = sin(q.x * 8.0 + sin(q.y * 4.0 + t));\n    float wave2 = cos(q.y * 7.0 - cos(q.x * 3.0 - t));\n    float wave3 = sin(d * 12.0 - t * 2.0);\n\n    float pattern = (wave1 + wave2 + wave3) / 3.0;\n\n    vec3 color = 0.5 + 0.5 * cos(\n        vec3(0.0, 2.0, 4.0) + pattern * 3.0 + t\n    );\n\n    float vignette = 1.0 - smoothstep(0.25, 1.5, d);\n    color *= vignette;\n\n    color += vec3(0.15, 0.8, 0.25)\n        * pow(max(pattern, 0.0), 4.0);\n\n    flagColor = vec4(color, 1.0);\n}",
+      "code": "void mainImage(out vec4 fragColor, in vec2 fragCoord)\n{\n    vec2 p = (fragCoord * 2.0 - iResolution.xy) / iResolution.y;\n    float t = iTime;\n    float d = length(p);\n\n    vec2 q = p;\n    q.x += sin(p.y * 4.0 + t) * 0.18;\n    q.y += cos(p.x * 3.0 - t * 0.8) * 0.18;\n\n    float wave1 = sin(q.x * 8.0 + sin(q.y * 4.0 + t));\n    float wave2 = cos(q.y * 7.0 - cos(q.x * 3.0 - t));\n    float wave3 = sin(d * 12.0 - t * 2.0);\n\n    float pattern = (wave1 + wave2 + wave3) / 3.0;\n\n    vec3 color = 0.5 + 0.5 * cos(\n        vec3(0.0, 2.0, 4.0) + pattern * 3.0 + t\n    );\n\n    float vignette = 1.0 - smoothstep(0.25, 1.5, d);\n    color *= vignette;\n\n    color += vec3(0.15, 0.8, 0.25)\n       * pow(max(pattern, 0.0), 4.0);\n\n    fragColor = vec4(color, 1.0);\n}",
       "name": "Image",
       "description": "",
       "type": "image"
