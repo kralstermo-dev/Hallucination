@@ -15,7 +15,7 @@
           "channel": 0
         }
       ],
-      "code": "void mainImage(out vec4 fragcolor, in vec2 fragcoord)",
+      "code": "void mainImage(out vec4 fragcolor, in vec2 fragCoord)\n{\n    vec2 p = (fragCoord * 2.0 - iResolution.xy) / iResolution.y;\n    float t = iTime;\n    float d =  length\n}",
       "name": "Image",
       "description": "",
       "type": "image"
