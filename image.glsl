@@ -17,4 +17,9 @@ void mainImage(out vec4 fragcolor, in vec2 fragCoord)
     vec3 color = 0.5 + 0.5 * cos(
         vec3(0.0, 2.0, 4.0) + pattern * 3.0 + t
     );
+
+    float vignette = 1.0 - smoothstep(0.25, 1.5, d);
+    color *= vignette;
+
+    color += vec3()
 }
