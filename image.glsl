@@ -9,6 +9,12 @@ void mainImage(out vec4 fragcolor, in vec2 fragCoord)
     q.x += cos(p.y * 3.0 - t * 0.8) * 0.18;
 
     float wave1 = sin(q.x * 8.0 + sin(q.y * 4.0 + t));
-    float wave2 = cos(q.y * 8.0 + cos(q.x * 4.0 - t));
-    float wave3 = sin
+    float wave2 = cos(q.y * 7.0 + cos(q.x * 4.0 - t));
+    float wave3 = sin(d * 12.0 - t * 2.0);
+
+    float pattern = (wave1 + wave2 + wave3) / 3.0;
+
+    vec3 color = 0.5 + 0.5 * cos(
+        
+    )
 }
