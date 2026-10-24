@@ -1,0 +1,24 @@
+{
+  "ver": "0.1",
+  "info": {
+    "id": "",
+    "name": "",
+    "description": "",
+    "tags": []
+  },
+  "renderpass": [
+    {
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "4dfGRr",
+          "channel": 0
+        }
+      ],
+      "code": "void mainImage(out vec4 fragcolor, in vec2 fragcoord)",
+      "name": "Image",
+      "description": "",
+      "type": "image"
+    }
+  ]
+}

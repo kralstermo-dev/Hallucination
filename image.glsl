@@ -1,0 +1,1 @@
+void mainImage(out vec4 fragcolor, in vec2 fragcoord)
