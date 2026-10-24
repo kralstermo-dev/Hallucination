@@ -21,5 +21,9 @@ void mainImage(out vec4 fragcolor, in vec2 fragCoord)
     float vignette = 1.0 - smoothstep(0.25, 1.5, d);
     color *= vignette;
 
-    color += vec3()
+    color += vec3(0.15, 0.8, 0.25)
+        * pow(max(pattern, 0.0), 4.0);
+
+    flagColor = vec4(color, 1.0);
+
 }
