@@ -1,8 +1,8 @@
-void mainImage(out vec4 fragcolor, in vec2 fragCoord)
+void mainImage(out vec4 fragColor, in vec2 fragCoord)
 {
     vec2 p = (fragCoord * 2.0 - iResolution.xy) / iResolution.y;
     float t = iTime;
-    float d =  length(p);
+    float d = length(p);
 
     vec2 q = p;
     q.x += sin(p.x * 4.0 + t) * 0.18;
@@ -25,5 +25,4 @@ void mainImage(out vec4 fragcolor, in vec2 fragCoord)
         * pow(max(pattern, 0.0), 4.0);
 
     flagColor = vec4(color, 1.0);
-
 }
