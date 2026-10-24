@@ -15,7 +15,7 @@
           "channel": 0
         }
       ],
-      "code": "void mainImage(out vec4 fragcolor, in vec2 fragCoord)\n{\n    vec2 p = (fragCoord * 2.0 - iResolution.xy) / iResolution.y;\n    float t = iTime;\n    float d =  length(p);\n\n    vec2 q = p;\n    q.x += sin(p.x * 4.0 + t) * 0.18;\n    q.x += cos(p.y * 3.0 - t * 0.8) * 0.18;\n\n    float.wave\n}",
+      "code": "void mainImage(out vec4 fragcolor, in vec2 fragCoord)\n{\n    vec2 p = (fragCoord * 2.0 - iResolution.xy) / iResolution.y;\n    float t = iTime;\n    float d =  length(p);\n\n    vec2 q = p;\n    q.x += sin(p.x * 4.0 + t) * 0.18;\n    q.x += cos(p.y * 3.0 - t * 0.8) * 0.18;\n\n    float wave1 = sin(q.x * 8.0 + sin(q.y * 4.0 + t));\n    float wave2 = cos(q.y * 8.0 + cos(q.x * 4.0 - t));\n    float wave3 = sin\n}",
       "name": "Image",
       "description": "",
       "type": "image"
