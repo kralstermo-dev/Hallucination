@@ -15,6 +15,6 @@ void mainImage(out vec4 fragcolor, in vec2 fragCoord)
     float pattern = (wave1 + wave2 + wave3) / 3.0;
 
     vec3 color = 0.5 + 0.5 * cos(
-        
-    )
+        vec3(0.0, 2.0, 4.0) + pattern * 3.0 + t
+    );
 }
